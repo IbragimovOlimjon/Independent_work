@@ -191,7 +191,6 @@ img {
 .first-section-information {
     padding-bottom: 100px;
 }
-
 .first-section-title {
     display: flex;
     border: 20px ridge #fff;
@@ -214,10 +213,14 @@ img {
 .heading {
     transform-origin: top center;
 }
-
 .first-section-title:hover .heading {
     transform: perspective(2000px) rotateX(125deg);
 }
+
+
+
+
+
 
 .play-two {
     background-image: url("../img/monnaliza.jpg");
@@ -254,4 +257,32 @@ img {
 .dark-mode {
     background-color: #000;
     color: #fff;
+}
+
+/* HOMEWORK-HTML */
+.main-form {
+
+}
+.main-select {
+    padding: 2px 15px;
+}
+.main-option {
+
+}
+.main-input {
+    padding: 5px 15px;
+    border-radius: 2px;
+}
+
+.main-input:not(:placeholder-shown) {
+    border-color: 3px solid red;
+} 
+
+.main-input:valid {
+    border-color: 3px solid rgb(19, 168, 19);
+}
+
+
+.main-input:disabled {
+    background-color: rgb(206, 206, 206);
 }
