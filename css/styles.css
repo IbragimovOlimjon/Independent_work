@@ -255,107 +255,40 @@ img {
     background-image: url("../img/davinchi2.jpg");
 }
 
-/* HOMEWORK-HTML */
-.main-form {
+/* Independent Work */
 
-}
-.main-select {
-    padding: 2px 15px;
-}
-.main-option {
-
-}
-.main-input {
-    padding: 5px 15px;
-    border-radius: 2px;
-}
-
-.main-input:not(:placeholder-shown) {
-    border: red;
-} 
-
-.main-input:valid {
-    border: 3px solid rgb(19, 168, 19);
-}
-
-
-.main-input:disabled {
-    background-color: rgb(206, 206, 206);
-}
-
-/* IMAGES */
-.homework-img-wrapper {
-
-}
-
-.main-photos {
-    width: 400px;
-    height: 500px;
-    object-fit: cover;
-    border:20px ridge  rgb(33, 66, 61);
-}
-
-.homework-img-wrapper {
-    flex-grow: 1;
-}
-
-.main-img {
+.sitenav__list {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
     margin: 0;
     padding: 0;
-    padding-bottom: 50px;
-    padding-top: 100px;
+    list-style: none;
+    position: relative;
 }
-.main-img-iteam {
-    padding-left: 5px;
-    padding-right: 5px;
+.sitenav__iteam:not(:last-child) {
+    margin-right: 45px;
+}
+.sitenav__link {
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #1eeed2;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: 0.2s ease;
 }
 
-.photos {
-    position: relative;
-    top: 50px;
-    z-index: -2;
+.sitenav__link:hover {
+    color: #dc4a9c;
 }
 
-.photos1 {
-    position: relative;
-    bottom: 50px;
-    z-index: -2;
-}
+.sitenav__active-line {
+    position: absolute;
 
-.photos2 {
-    position: relative;
-    top: 50px;
-    z-index: -2;
-}
-
-.photos3 {
-    position: relative;
-    bottom: 50px;
-    z-index: -2;
-}
-
-.photos4 {
-    position: relative;
-    top: 50px;
-    z-index: -2;
-}
-
-.photos5 {
-    position: relative;
-    bottom: 50px;
-    z-index: -2;
-}
-
-.photos6 {
-    position: relative;
-    top: 50px;
-    z-index: -2;
-}
-.main-photos {
-    transform: scale(0.7);
-    box-shadow: #000 10px 10px 20px 20px;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    transition: 0.4s ease;
 }

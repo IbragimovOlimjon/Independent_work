@@ -1,24 +1,33 @@
-const elLightModeButton = document.querySelector('.light-link');
-const elDarkModeButton = document.querySelector('.night-link');
+const elsSitenavItem = document.querySelectorAll('.sitenav__item');
+const elsSitenavLink = document.querySelectorAll('.sitenav__link');
 
-elLightModeButton.addEventListener('click', function() {
-    document.body.classList.add('dark-mode');
+elsSitenavLink.forEach(function (elLink) {
+    elLink.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        
+        elsSitenavItem.forEach(function (elItem) {
+            elItem.classList.remove('sitenav__item--active');
+        });
+        
+        elLink.parentElement.classList.add('sitenav__item--active');
+        
+        updateSitenavActiveLineStyles();
+        
+    });
 });
 
-elDarkModeButton.addEventListener('click', function() {
-    document.body.classList.remove('dark-mode');
-});
+// Chiziqchani topamiz
+const elSitenavActiveLine = document.querySelector('.sitenav__active-line');
 
-
-const elSelect = document.querySelector ('.main-select');
-const elInput = document.querySelector ('.main-input');
-elSelect.addEventListener('change', function () {
-console.log(elSelect.value);
-if (elSelect.value === 'Other') {
-elInput.disabled = false;
-} else {
-elInput.value = '';
-elInput.disabled = true;
+function updateSitenavActiveLineStyles () {
+    // Faol elementni top
+    const elSitenavItemActive = document.querySelector('.sitenav__item--active');
+    
+    // Chiziqchaning chap tomonini faol element chap tomoniga tengla
+    elSitenavActiveLine.style.left = elSitenavItemActive.offsetLeft + 'px';
+    
+    // Chiziqchaning enini faol element eniga tengla
+    elSitenavActiveLine.style.width = elSitenavItemActive.offsetWidth + 'px';
 }
 
-});
+updateSitenavActiveLineStyles();
